@@ -1,9 +1,7 @@
 #!/bin/bash
 
-#SCRIPTFILE=/usr/local/lib/script-after-mount.sh
-#SERVICEFILE=/etc/systemd/system/exec-script-after-mount.service
-SCRIPTFILE=~/Dokumente/tmp/ttt.test
-SERVICEFILE=~/Dokumente/tmp/ttt2.test
+SCRIPTFILE=/usr/local/lib/script-after-mount.sh
+SERVICEFILE=/etc/systemd/system/exec-script-after-mount.service
 
 echo "There is a timlog at /var/log/execute-script-after-mount-time.log"
 read -p "Insert your drive. If it is inserted press enter."
@@ -32,6 +30,8 @@ ENDOFFILE
 
 cat > $SCRIPTFILE << ENDOFFILE
 #!/bin/bash
-rsync -Icr  "$(zenity --file-selection)" "$PATHTODRIVE"
+rsync -Icr  "$(zenity --file-selection --title="select file to copy")" "$(zenity --file-selection --directory --title="select folder on drive where the file should be copied")"
 echo \$(date) >> /var/log/execute-script-after-mount-time.log
 ENDOFFILE
+
+systemctl enable exec-script-after-mount.service

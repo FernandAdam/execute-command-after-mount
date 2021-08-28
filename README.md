@@ -4,6 +4,6 @@ This is a program to add a service executing a script if a specific drive mounte
 # Start
 - run the program with sudo
 - plug in your device(in my case it was a usb-drive)
-- choose the folder or file where you want to copy
-- choose the folder where the file or folder should be copied
+- choose the folder  where you want to copy
+- choose the folder where the folder should be copied
 

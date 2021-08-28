@@ -30,7 +30,7 @@ ENDOFFILE
 
 cat > $SCRIPTFILE << ENDOFFILE
 #!/bin/bash
-rsync -Icr  "$(zenity --file-selection --title="select file to copy")" "$(zenity --file-selection --directory --title="select folder on drive where the file should be copied")"
+rsync -Icr  "$(zenity --file-selection --directory --title="select folder to copy")" "$(zenity --file-selection --directory --title="select folder on drive where the file should be copied")"
 echo \$(date) >> /var/log/execute-script-after-mount-time.log
 ENDOFFILE
 

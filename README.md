@@ -7,3 +7,5 @@ This is a program to add a service executing a script if a specific drive mounte
 - choose the folder  where you want to copy
 - choose the folder where the folder should be copied
 
+# If you want to uninstall the program and the service run:
+`sudo remove-execute-script-after-mount`

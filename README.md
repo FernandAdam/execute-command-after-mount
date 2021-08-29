@@ -9,3 +9,4 @@ This is a program to add a service executing a script if a specific drive mounte
 
 # If you want to uninstall the program and the service run:
 `sudo remove-execute-script-after-mount`
+- This is only nedded if you didn't install the package!
